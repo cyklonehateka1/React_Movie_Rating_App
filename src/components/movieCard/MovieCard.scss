@@ -2,7 +2,12 @@
 
 .card-item {
   background: $secondary-color;
-  cursor: ponter;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.06);
+  }
 }
 
 .card-top {
