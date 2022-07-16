@@ -2,10 +2,69 @@
 
 .footer {
   background: $secondary-color;
-  height: 72px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: $font-primary;
   flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-first {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  .log {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+hr {
+  border: 1px solid rgb(136, 136, 136);
+  width: 60%;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.youtube-icon {
+  color: white;
+  margin-right: 10px;
+  border: none;
+  background-color: red;
+  border-radius: 5px;
+  border: none;
+}
+
+.twitter {
+  color: rgb(0, 110, 255);
+  margin-right: 10px;
+}
+.github {
+  margin-right: 10px;
+}
+
+.linkedin {
+  margin-right: 10px;
+  color: rgb(0, 68, 255);
+}
+
+.linkedin,
+.youtube,
+.github,
+.twitter {
+  @media (max-width: 575.98px) {
+    font-size: 20px;
+    margin-right: 5px;
+  }
 }
