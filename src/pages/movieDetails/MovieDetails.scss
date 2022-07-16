@@ -1,0 +1,100 @@
+@import "../../common/colors.scss";
+
+.movie-section {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 0 20px 10px;
+  color: $font-primary;
+  font-weight: 400;
+
+  @media (max-width: 575.98px) {
+    flex-direction: column;
+    padding: 10px 10px 10px 10px;
+    font-weight: 200;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.movie-rating {
+  padding-left: 3px;
+  margin-top: 20px;
+  color: $font-secondary;
+  display: flex;
+
+  span {
+    margin-right: 20px;
+  }
+
+  @media (max-width: 575.98px) {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+}
+
+.movie-title {
+  font-size: 30px;
+  color: $font-primary;
+}
+
+.movie-plot {
+  margin-top: 40px;
+  line-height: 1.8rem;
+  margin-bottom: 30px;
+
+  @media (max-width: 575.98px) {
+    text-align: justify;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+}
+
+.movie-info > div span:first-child {
+  padding: 10px 0;
+  color: $font-primary;
+  width: 100px;
+  font-weight: 600;
+  display: inline-block;
+
+  @media (max-width: 575.98px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.movie-info > div span {
+  color: $font-secondary;
+}
+
+.star {
+  color: yellow;
+  margin-left: 5px;
+}
+
+.thumbs-up {
+  color: white;
+  margin-left: 5px;
+}
+
+.film {
+  color: rgb(209, 255, 243);
+  margin-left: 5px;
+}
+
+.calendar {
+  color: rgb(255, 255, 255);
+  margin-left: 5px;
+}
+
+.movie-rating > span {
+  display: flex;
+}
+
+.section-right {
+  margin-left: 20px;
+
+  @media (max-width: 575.98px) {
+    margin: 20px 10px 10px 10px;
+  }
+}
