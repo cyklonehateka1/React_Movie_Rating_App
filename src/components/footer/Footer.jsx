@@ -6,6 +6,7 @@ import {
   FaTwitter,
   FaYoutubeSquare,
 } from "react-icons/fa";
+import { BsYoutube } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -16,18 +17,24 @@ const Footer = () => {
       </div>
       <hr />
       <div className="socials">
-        <div className="youtube">
-          <FaYoutubeSquare className="youtube-icon" />
-        </div>
-        <div className="github">
+        <a
+          href="https://www.youtube.com/channel/UCnbmkQFCaMTWNIooK9ezNJw"
+          className="youtube"
+        >
+          <BsYoutube className="youtube-icon" />
+        </a>
+        <a href="https://www.github.com/cyklonehateka1" className="github">
           <FaGithub />
-        </div>
-        <div className="twitter">
+        </a>
+        <a href="https://twitter.com/cyklonehateka" className="twitter">
           <FaTwitter />
-        </div>
-        <div className="linkedin">
+        </a>
+        <a
+          href="https://www.linkedin.com/in/emmanuel-hateka-01517b22b/"
+          className="linkedin"
+        >
           <FaLinkedinIn />
-        </div>
+        </a>
       </div>
     </div>
   );
