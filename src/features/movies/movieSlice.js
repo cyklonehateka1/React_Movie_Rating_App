@@ -2,22 +2,20 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import MovieApi from "../../common/apis/MovieApi";
 import { APIKey } from "../../common/apis/MovieApiKey";
 
-const movieText = "Harry";
 export const fetchAsyncMovies = createAsyncThunk(
   "movies/fetchAsyncMovies",
-  async () => {
+  async (term) => {
     const response = await MovieApi.get(
-      `?apiKey=${APIKey}&s=${movieText}&type=movie`
+      `?apiKey=${APIKey}&s=${term}&type=movie`
     );
     return response.data;
   }
 );
-const seriesText = "friends";
 export const fetchAsyncShows = createAsyncThunk(
   "movies/fetchAsyncShows",
-  async () => {
+  async (term) => {
     const response = await MovieApi.get(
-      `?apiKey=${APIKey}&s=${seriesText}&type=series`
+      `?apiKey=${APIKey}&s=${term}&type=series`
     );
     return response.data;
   }
@@ -40,14 +38,6 @@ const initialState = {
 const movieSlice = createSlice({
   name: "movies",
   initialState,
-  reducers: {
-    addMovies: (state, { payload }) => {
-      state.movies = payload;
-    },
-    removeItem: (state) => {
-      state.selectMovieOrShow = {};
-    },
-  },
   extraReducers: {
     [fetchAsyncMovies.pending]: () => {},
     [fetchAsyncMovies.fulfilled]: (state, { payload }) => {
